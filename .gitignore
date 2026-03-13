@@ -1,0 +1,18 @@
+# dataset
+dataset/
+
+# model files
+model/
+*.keras
+*.h5
+
+# python cache
+__pycache__/
+*.pyc
+
+# jupyter checkpoints
+.ipynb_checkpoints/
+
+# venv
+venv/
+.env
