@@ -1,19 +1,18 @@
 # Cat Classifier
 
-This project is a deep learning image classification project that classifies images as **cat** or **not cat** using TensorFlow/Keras.
+A TensorFlow/Keras image classification project that predicts whether an image is a **cat** or **not cat**.
 
-## Project Overview
+## Overview
 
-The goal of this project is to build a convolutional neural network (CNN) model that can learn image patterns and predict whether a given image contains a cat or not. This project is useful for practicing computer vision, image preprocessing, model training, validation, and single-image prediction.
+This project uses a Convolutional Neural Network (CNN) to learn visual patterns from labeled images and perform binary image classification. It was built as a computer vision practice project to strengthen skills in deep learning, image preprocessing, model training, validation, and prediction.
 
 ## Features
 
 - Binary image classification: **cat** vs **not cat**
-- Image preprocessing and dataset loading
-- CNN-based deep learning model
-- Model training and validation
-- Single image prediction
-- Saved trained model for later use
+- Image preprocessing and loading
+- CNN model training and validation
+- Single-image prediction
+- Clean GitHub structure without large dataset files
 
 ## Project Structure
 
@@ -22,31 +21,37 @@ cat_classifier/
 ├── dataset/
 ├── model/
 ├── notebook/
+│   └── cat_vs_not_cat.ipynb
 ├── .gitignore
 └── README.md
 ```
 
-### Folder Description
+## Folder Description
 
-- `dataset/` — contains the training and validation images  
-- `model/` — contains saved model files  
-- `notebook/` — contains the Jupyter notebook used for training and testing  
-- `.gitignore` — excludes large or unnecessary files from GitHub  
-- `README.md` — project documentation  
+- `dataset/` — local dataset folder for training and validation images
+- `model/` — local folder for saved model files
+- `notebook/` — contains the Jupyter notebook used for training and testing
+- `.gitignore` — excludes large or unnecessary files from GitHub
+- `README.md` — project documentation
 
 ## Dataset
 
 The dataset is not included in this repository because it is too large to upload to GitHub.
 
-You can download the dataset from Kaggle:
+Dataset source:
+- [Dog and Cat Classification Dataset on Kaggle](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
 
-- [Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
-
-### How to use the dataset
+### How to set up the dataset
 
 1. Download the dataset from Kaggle.
-2. Extract the files.
+2. Extract the downloaded files.
 3. Place the dataset inside the `dataset/` folder in this project.
+
+## Model File
+
+The trained model file is not included in this repository to keep the project lightweight and easier to clone.
+
+If needed, you can retrain the model using the notebook and save your own `.keras` file locally inside the `model/` folder.
 
 ## Technologies Used
 
@@ -56,52 +61,60 @@ You can download the dataset from Kaggle:
 - Matplotlib
 - Jupyter Notebook
 
-## Model
+## Model Architecture
 
-This project uses a **Convolutional Neural Network (CNN)** for image classification. The model is trained on labeled images and learns to distinguish cat images from non-cat images.
+This project uses a **Convolutional Neural Network (CNN)** for binary image classification. The model learns features from training images and predicts whether a new image belongs to the **cat** or **not cat** class.
 
 ## How to Run
 
 1. Clone this repository:
+
    ```bash
-   git clone https://github.com/YOUR_USERNAME/cat-classifier.git
+   git clone https://github.com/CapMorningStar/cat-classifier.git
    ```
 
 2. Open the project folder:
+
    ```bash
    cd cat-classifier
    ```
 
 3. Install the required libraries:
+
    ```bash
    pip install tensorflow numpy matplotlib jupyter
    ```
 
-4. Open the notebook:
+4. Launch Jupyter Notebook:
+
    ```bash
    jupyter notebook
    ```
 
-5. Run the notebook inside the `notebook/` folder.
+5. Open and run:
+
+   ```text
+   notebook/cat_vs_not_cat.ipynb
+   ```
 
 ## Output
 
-The model predicts whether an input image is:
+The model predicts one of the following classes:
 
 - **Cat**
 - **Not Cat**
 
 ## Notes
 
-- The full dataset is excluded from this repository to keep it lightweight.
-- Trained model files such as `.keras` are also excluded if needed.
-- You can use your own test image by updating the image path in the notebook.
+- The full dataset is excluded from this repository.
+- The trained `.keras` model file is also excluded from this repository.
+- You can test your own images by updating the image path inside the notebook.
 
 ## Future Improvements
 
 - Improve model accuracy
 - Add data augmentation
-- Add more evaluation metrics
+- Add evaluation metrics such as precision and recall
 - Build a simple web app for prediction
 - Deploy the model online
 
